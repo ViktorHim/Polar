@@ -25,9 +25,56 @@
 			line-height: 27px
 			max-width: 523px
 			margin-bottom: 50px
-		&__btn
-
+		&__content
+			padding-left: 20px
+			z-index: 10
+			position: relative
 		&__img
 			position: absolute
 			top: -159px
 			right: -250px
+
+@media ( max-width: 1100px)
+		.hero-area
+			padding: 250px 0 150px 0
+			&__img
+				height: 500px
+				right: -150px
+				top: -100px
+			&__title
+				max-width: 500px
+			&__text
+				max-width: 400px
+@media ( max-width: 775px)
+		.hero-area
+			padding: 100px 0 340px 0
+			&__img
+				right: 0
+				top: 250px
+				height: 400px
+			&__title
+				font-size: 46px
+				line-height: 50px
+
+
+@media ( max-width: 610px)
+		.hero-area
+			padding: 100px 0 340px 0
+			&__img
+				right: 60px
+				height: 300px	
+			&__title
+				font-size: 40px
+				line-height: 36px
+				margin-bottom: 10px
+			&__text
+				font-size: 14px
+				line-height: 19px
+@media ( max-width: 480px)
+		.hero-area
+			padding: 50px 0 380px 0
+			&__img
+				top: 310px
+				right: 10px
+			&__text
+				margin-bottom: 25px

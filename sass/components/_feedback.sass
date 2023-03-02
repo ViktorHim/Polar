@@ -30,12 +30,6 @@
 				position: absolute
 				top: 3px
 				left: -22px
-		&__slider-switch
-
-		&__img
-
-.container
-
 .buyer
 		display: flex
 		align-items: center
@@ -83,3 +77,23 @@
 			height: 58px
 			border: 1px solid $pink
 			border-radius: 50%
+
+@media ( max-width: 900px)
+	.feedback
+		padding: 50px 0 50px 0
+		&__img
+			height: 300px
+@media ( max-width: 775px)
+	.feedback
+		&__img
+			height: 200px
+@media ( max-width: 610px)
+	.feedback
+		&__img
+			display: none
+		&__content
+			display: flex
+			justify-content: center
+			padding: 40px 0
+		&__box
+			display: block

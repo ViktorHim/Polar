@@ -76,3 +76,30 @@
 	font-size: 26px
 	line-height: 36px
 	margin-right: 5px
+
+@media ( max-width: 1100px)
+	.product
+		&__item
+			display: block
+			text-align: center
+			padding: 0
+		&__item-text
+			// display: block
+			max-width: 100%
+			padding: 0 100px
+@media ( max-width: 900px)
+	.dishes
+		&__list
+			justify-content: space-around
+			flex-wrap: wrap
+			margin-bottom: 30px
+		&__item
+			margin-bottom: 20px
+		&__item + &__item
+			margin-left: 20px
+@media ( max-width: 610px)
+	.product
+		&__item-img
+			width: 100%
+		&__item-text
+			padding: 0 20px
