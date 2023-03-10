@@ -97,6 +97,7 @@ body {
   position: relative;
 }
 .menu__line::before, .menu__line::after {
+  transition: 0.5s all;
   content: "";
   position: absolute;
   height: 2px;
@@ -125,6 +126,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .menu__btn_active .menu__line {
+    visibility: hidden;
+  }
+  .menu__btn_active .menu__line::before, .menu__btn_active .menu__line::after {
+    visibility: visible;
+  }
+  .menu__btn_active .menu__line::before {
+    top: 0;
+    transform: rotateZ(45deg);
+  }
+  .menu__btn_active .menu__line::after {
+    bottom: 0;
+    transform: rotateZ(-45deg);
   }
   .menu__list {
     z-index: 20;

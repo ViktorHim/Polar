@@ -46,6 +46,7 @@
 				background-color: $white
 				position: relative
 				&::before, &::after
+					transition: .5s all
 					content: ""
 					position: absolute
 					height: 2px
@@ -69,6 +70,18 @@
 			display: flex
 			align-items: center
 			justify-content: center
+		&__line
+		&__btn_active
+			.menu__line
+				visibility: hidden
+				&::before, &::after
+					visibility: visible
+				&::before
+					top: 0
+					transform: rotateZ(45deg)
+				&::after
+					bottom: 0
+					transform: rotateZ(-45deg)
 		&__list
 			z-index: 20
 			position: fixed
