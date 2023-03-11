@@ -7,14 +7,6 @@ const uglify = require('gulp-uglify-es').default;
 const browserSync = require('browser-sync').create();
 const autoPrefixer = require('gulp-autoprefixer');
 const clean = require('gulp-clean');
-const htmlmin = require('gulp-htmlmin')
-
-function layout() {
-	return src('app/index.html')
-		.pipe(concat('index.min.html'))
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(dest('app'));
-}
 
 function styles() {
 	return src('app/sass/style.sass')
@@ -56,7 +48,7 @@ function building() {
 		'app/js/main.min.js',
 		'app/images/*.*',
 		'app/fonts/*.*',
-		'app/**/*.min.html'
+		'app/**/*.html'
 	], {base: 'app'})
 	.pipe(dest('dist'))
 }
@@ -67,11 +59,10 @@ function watching() {
 	watch(['app/*.html']).on('change', browserSync.reload);
 }
 
-exports.layout = layout;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.watching = watching;
 exports.browsersync = browsersync;
 
 exports.build = series(cleanDist, building);
-exports.default = parallel(layout, styles, scripts, browsersync, watching);
+exports.default = parallel( styles, scripts, browsersync, watching);
